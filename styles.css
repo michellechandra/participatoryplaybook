@@ -196,10 +196,6 @@ p {
 	margin-left: 20px;
 }
 
-.rightcol {
-	background-color: #E4F1FE;
-}
-
 .photocaption {
     font-size: 17px;
 	line-height: 1.25;
@@ -301,11 +297,33 @@ p {
 }
 
 /* Scroll JS CSS Effect Styles */
-#right84fade1 {
-	opacity: 0;
+div#right84fade1 {
+	opacity: .3;
 	margin-bottom: 100px;
 }
 
-#left84fade1 {
-	opacity: 0;
+.rightcol {
+	background-color: #E4F1FE;
+	opacity: .3;
 }
+
+#left84fade1 {
+	opacity: .3;
+}
+
+#left10fade1 {
+	opacity: .3;
+}
+
+#right10fade1 {
+	margin-top: 100px;
+	opacity: .3;
+}
+
+#middle10fade1 {
+	opacity: .3;
+}
+
+
+
+

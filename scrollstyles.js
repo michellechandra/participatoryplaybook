@@ -4,7 +4,8 @@ $(document).ready(function(){
 
    /* Scroll Magic Controller */
    var controller = new ScrollMagic.Controller();
-
+   TweenLite.defaultOverwrite = false;
+   
    /* FadeOut Header Caption */
    var fadeout_tween = TweenMax.to('#headercaption', 1,{ opacity: 0 });
    new ScrollMagic.Scene({
@@ -75,69 +76,89 @@ $(document).ready(function(){
     .setPin("#timelinediv15", {pushFollowers: false})
     .addTo(controller); // the element we want to pin
 
-   /* FadeOut 1984 Images */
-   var fadeinone = TweenMax.to('#left84fade1', 1,{ opacity: 1 });
-   new ScrollMagic.Scene({
-      triggerElement: '#left84fade1',
-      triggerHook: 'onEnter',
-      reverse: true
-    })
-    .setTween(fadeinone)
-    .addTo(controller); 
+   /* FadeIn and Out 1984 Images */
+    var scene1 = new ScrollMagic.Scene({
+          triggerElement: '#left84fade1',
+          triggerHook: 'onCenter',
+          reverse: true
+        })
+        .setTween(TweenMax.fromTo('#left84fade1', 1, {opacity: 0.3}, {opacity: 1}))
+        .addTo(controller);
 
-   var fadeout_one = TweenMax.to('#left84fade1', 3,{ opacity: .25});
-   new ScrollMagic.Scene({
-      triggerElement: '#left84fade1',
-      triggerHook: '0.2',
-      reverse: true
-    })
-    .setTween(fadeout_one)
-    .addTo(controller); 
+    var scene2 = new ScrollMagic.Scene({
+          triggerElement: '#left84fade1',
+          triggerHook: 'onLeave',
+          reverse: true
+        })
+        .setTween(TweenMax.fromTo('#left84fade1', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+        .addTo(controller);
 
-   var fadeintwo = TweenMax.to('#right84fade1', 1,{ opacity: 1 });
-   new ScrollMagic.Scene({
+    var scene3 = new ScrollMagic.Scene({
       triggerElement: '#right84fade1',
-      triggerHook: 'onEnter',
+      triggerHook: 'onCenter',
       reverse: true
     })
-    .setTween(fadeinone)
-    .addTo(controller); 
+    .setTween(TweenMax.fromTo('#right84fade1', 1, {opacity: 0.3}, {opacity: 1}))
+    .addTo(controller);
 
-   var fadeout_two = TweenMax.to('#right84fade1', 3, { opacity: .25});
-   new ScrollMagic.Scene({
+    var scene4 = new ScrollMagic.Scene({
       triggerElement: '#right84fade1',
-      triggerHook: 'onLeave',
+      triggerHook: '.2',
       reverse: true
     })
-    .setTween(fadeout_two)
-    .addTo(controller); 
+    .setTween(TweenMax.fromTo('#right84fade1', 1.5, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+    .addTo(controller);
 
-   /* FadeOut 2010 Images */
-   var fadeout_one = TweenMax.to('#left10fade1', 2,{ opacity: .5});
-   new ScrollMagic.Scene({
-      triggerElement: '#left10fade1',
-      triggerHook: '.5',
-      reverse: true
-    })
-    .setTween(fadeout_one)
-    .addTo(controller); 
 
-   var fadeout_three = TweenMax.to('#right10fade1', 3, { opacity: .3, delay: .5 });
-   new ScrollMagic.Scene({
+
+
+/********** Fade In and Out 2010 Images **************/
+    var scene5 = new ScrollMagic.Scene({
+          triggerElement: '#middle10fade1',
+          triggerHook: 'onCenter',
+          reverse: true
+        })
+        .setTween(TweenMax.fromTo('#middle10fade1', 1, {opacity: 0.3}, {opacity: 1}))
+        .addTo(controller);
+
+    var scene6 = new ScrollMagic.Scene({
+          triggerElement: '#middle10fade1',
+          triggerHook: 'onLeave',
+          reverse: true
+        })
+        .setTween(TweenMax.fromTo('#middle10fade1', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+        .addTo(controller);
+
+    var scene7 = new ScrollMagic.Scene({
+          triggerElement: '#left10fade1',
+          triggerHook: 'onCenter',
+          reverse: true
+        })
+        .setTween(TweenMax.fromTo('#left10fade1', 1, {opacity: 0.3}, {opacity: 1}))
+        .addTo(controller);
+
+    var scene8 = new ScrollMagic.Scene({
+          triggerElement: '#left10fade1',
+          triggerHook: 'onLeave',
+          reverse: true
+        })
+        .setTween(TweenMax.fromTo('#left10fade1', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+        .addTo(controller);
+
+    var scene9 = new ScrollMagic.Scene({
       triggerElement: '#right10fade1',
-      triggerHook: '.5',
+      triggerHook: 'onCenter',
       reverse: true
     })
-    .setTween(fadeout_three)
-    .addTo(controller); 
+    .setTween(TweenMax.fromTo('#right10fade1', 1, {opacity: 0.3}, {opacity: 1}))
+    .addTo(controller);
 
-   var fadeout_four = TweenMax.to('#middle10fade1', 3, { opacity: .3, delay: .5 });
-   new ScrollMagic.Scene({
-      triggerElement: '#middle10fade1',
-      triggerHook: '.5',
+    var scene10 = new ScrollMagic.Scene({
+      triggerElement: '#right10fade1',
+      triggerHook: '.2',
       reverse: true
     })
-    .setTween(fadeout_four)
-    .addTo(controller); 
-  
-}); 
+    .setTween(TweenMax.fromTo('#right10fade1', 1.5, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+    .addTo(controller);
+
+  });
