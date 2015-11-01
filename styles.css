@@ -100,7 +100,7 @@ p {
 }
 
 .projecttext {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 #petequote {
@@ -135,26 +135,31 @@ p {
 }
 
 #timelinediv10 {
+	width: 100%;
 	margin-bottom: 50px;
 	z-index: 100;
 }
 
 #timelinediv11 {
+	width: 100%;
 	margin-bottom: 50px;
 	z-index: 102;
 }
 
 #timelinediv12 {
+	width: 100%;
 	margin-bottom: 50px;
 	z-index: 103;
 }
 
 #timelinediv14 {
+	width: 100%;
 	margin-bottom: 50px;
 	z-index: 104;
 }
 
 #timelinediv15 {
+	width: 100%;
 	margin-bottom: 50px;
 	z-index: 105;
 }
@@ -287,3 +292,10 @@ p {
 	margin-top: 50px;
 }
 
+#middlecolumn15 {
+	margin-bottom: 50px;
+}
+
+#rightcol15 {
+	margin-top: 100px;
+}
