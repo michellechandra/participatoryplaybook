@@ -5,7 +5,7 @@ $(document).ready(function(){
    /* Scroll Magic Controller */
    var controller = new ScrollMagic.Controller();
    TweenLite.defaultOverwrite = false;
-   
+
    /* FadeOut Header Caption */
    var fadeout_tween = TweenMax.to('#headercaption', 1,{ opacity: 0 });
    new ScrollMagic.Scene({
@@ -146,19 +146,134 @@ $(document).ready(function(){
         .addTo(controller);
 
     var scene9 = new ScrollMagic.Scene({
-      triggerElement: '#right10fade1',
-      triggerHook: 'onCenter',
-      reverse: true
-    })
-    .setTween(TweenMax.fromTo('#right10fade1', 1, {opacity: 0.3}, {opacity: 1}))
-    .addTo(controller);
+        triggerElement: '#right10fade1',
+        triggerHook: 'onCenter',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#right10fade1', 1, {opacity: 0.3}, {opacity: 1}))
+      .addTo(controller);
 
-    var scene10 = new ScrollMagic.Scene({
-      triggerElement: '#right10fade1',
-      triggerHook: '.2',
-      reverse: true
-    })
-    .setTween(TweenMax.fromTo('#right10fade1', 1.5, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
-    .addTo(controller);
+     var scene10 = new ScrollMagic.Scene({
+        triggerElement: '#right10fade1',
+        triggerHook: 'onLeave',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#right10fade1', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+      .addTo(controller);
+
+    var scene11 = new ScrollMagic.Scene({
+        triggerElement: '#middle10fade2',
+        triggerHook: 'onCenter',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#middle10fade2', 1, {opacity: 0.3}, {opacity: 1}))
+      .addTo(controller);
+
+     var scene12 = new ScrollMagic.Scene({
+        triggerElement: '#middle10fade2',
+        triggerHook: 'onLeave',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#middle10fade2', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+      .addTo(controller);
+
+    var scene13 = new ScrollMagic.Scene({
+        triggerElement: '#middle10fade3',
+        triggerHook: 'onCenter',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#middle10fade3', 1, {opacity: 0.3}, {opacity: 1}))
+      .addTo(controller);
+
+     var scene14 = new ScrollMagic.Scene({
+        triggerElement: '#middle10fade3',
+        triggerHook: 'onLeave',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#middle10fade3', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+      .addTo(controller);
+
+
+/********** Fade In and Out 2011 Images **************/
+    var scene15 = new ScrollMagic.Scene({
+        triggerElement: '#middle11fade1',
+        triggerHook: 'onCenter',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#middle11fade1 ', 1, {opacity: 0.3}, {opacity: 1}))
+      .addTo(controller);
+
+     var scene16 = new ScrollMagic.Scene({
+        triggerElement: '#middle11fade1',
+        triggerHook: 'onLeave',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#middle11fade1', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+      .addTo(controller);
+
+    var scene17 = new ScrollMagic.Scene({
+        triggerElement: '#left11fade1',
+        triggerHook: 'onCenter',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#left11fade1 ', 1, {opacity: 0.3}, {opacity: 1}))
+      .addTo(controller);
+
+     var scene18 = new ScrollMagic.Scene({
+        triggerElement: '#left11fade1',
+        triggerHook: 'onLeave',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#left11fade1', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+      .addTo(controller);
+
+    var scene19 = new ScrollMagic.Scene({
+        triggerElement: '#right11fade1',
+        triggerHook: 'onCenter',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#right11fade1 ', 1, {opacity: 0.3}, {opacity: 1}))
+      .addTo(controller);
+
+     var scene20 = new ScrollMagic.Scene({
+        triggerElement: '#right11fade1',
+        triggerHook: 'onLeave',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#right11fade1', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+      .addTo(controller);
+
+    var scene21 = new ScrollMagic.Scene({
+        triggerElement: '#left11fade2',
+        triggerHook: 'onCenter',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#left11fade2 ', 1, {opacity: 0.3}, {opacity: 1}))
+      .addTo(controller);
+
+     var scene22 = new ScrollMagic.Scene({
+        triggerElement: '#left11fade2',
+        triggerHook: 'onLeave',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#left11fade2', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+      .addTo(controller);
+
+      var scene23 = new ScrollMagic.Scene({
+        triggerElement: '#middle11fade',
+        triggerHook: 'onEnter',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#middle11fade', 3, {opacity: 0.3}, {opacity: 1}))
+      .addTo(controller);
+
+   /*  var scene24 = new ScrollMagic.Scene({
+        triggerElement: '#middle11fade',
+        triggerHook: '0',
+        reverse: true
+      })
+      .setTween(TweenMax.fromTo('#middle11fade', 2, {opacity: 1}, {opacity: 0.3, immediateRender: false}))
+      .addTo(controller); */
+
 
   });

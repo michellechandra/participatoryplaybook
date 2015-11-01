@@ -304,7 +304,6 @@ div#right84fade1 {
 
 .rightcol {
 	background-color: #E4F1FE;
-	opacity: .3;
 }
 
 #left84fade1 {
@@ -324,6 +323,31 @@ div#right84fade1 {
 	opacity: .3;
 }
 
+#middle10fade2 {
+	opacity: .3;
+}
+
+#middle10fade3 {
+	opacity: .3;
+}
 
 
+#middle11fade1 {
+	opacity: .3;
+}
 
+#left11fade1 {
+	opacity: .3;
+}
+
+#right11fade1 {
+	opacity: .3;
+}
+
+#left11fade2 {
+	opacity: .3;
+}
+
+#middle11fade {
+	opacity: .3;
+}
