@@ -76,19 +76,37 @@ $(document).ready(function(){
     .addTo(controller); // the element we want to pin
 
    /* FadeOut 1984 Images */
-   var fadeout_one = TweenMax.to('#left84fade1', 3,{ opacity: .5});
+   var fadeinone = TweenMax.to('#left84fade1', 1,{ opacity: 1 });
    new ScrollMagic.Scene({
       triggerElement: '#left84fade1',
-      triggerHook: '0.5',
+      triggerHook: 'onEnter',
+      reverse: true
+    })
+    .setTween(fadeinone)
+    .addTo(controller); 
+
+   var fadeout_one = TweenMax.to('#left84fade1', 3,{ opacity: .25});
+   new ScrollMagic.Scene({
+      triggerElement: '#left84fade1',
+      triggerHook: '0.2',
       reverse: true
     })
     .setTween(fadeout_one)
     .addTo(controller); 
 
-   var fadeout_two = TweenMax.to('#right84fade1', 2, { opacity: .5, delay: .5});
+   var fadeintwo = TweenMax.to('#right84fade1', 1,{ opacity: 1 });
    new ScrollMagic.Scene({
       triggerElement: '#right84fade1',
-      triggerHook: '0',
+      triggerHook: 'onEnter',
+      reverse: true
+    })
+    .setTween(fadeinone)
+    .addTo(controller); 
+
+   var fadeout_two = TweenMax.to('#right84fade1', 3, { opacity: .25});
+   new ScrollMagic.Scene({
+      triggerElement: '#right84fade1',
+      triggerHook: 'onLeave',
       reverse: true
     })
     .setTween(fadeout_two)

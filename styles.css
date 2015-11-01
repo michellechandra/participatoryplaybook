@@ -299,3 +299,13 @@ p {
 #rightcol15 {
 	margin-top: 100px;
 }
+
+/* Scroll JS CSS Effect Styles */
+#right84fade1 {
+	opacity: 0;
+	margin-bottom: 100px;
+}
+
+#left84fade1 {
+	opacity: 0;
+}
